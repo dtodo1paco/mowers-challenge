@@ -14,7 +14,6 @@ export class MowerHandler {
       case MOVEMENT.MOVE_FORWARD:
         try {
           this.mower.moveForward();
-          console.log("pos: " + this.mower.printPosition())
         } catch (e) { // IllegalMoveError
           console.warn("Unable to move forward", e);
         }
