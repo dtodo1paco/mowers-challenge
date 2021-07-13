@@ -1,0 +1,45 @@
+{
+  "name": "mowers-challenge",
+  "version": "1.0.0",
+  "description": "A technical challenge",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run cleanup && npm run compile && npm run copy-inputs",
+    "cleanup": "node ./scripts/cleanup.js",
+    "compile": "tsc --project tsconfig.json",
+    "compile-watch": "tsc -w",
+    "copy-inputs": "node ./scripts/copy_inputs.js",
+    "dev": "npm run compile-watch && npm run runMe",
+    "runMe": "node build/main/index.js",
+    "start": "npm run build && npm run runMe",
+    "test": "jest",
+    "test:coverage":"jest --coverage",
+    "test:verbose": "jest --verbose --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dtodo1paco/mowers-challenge.git"
+  },
+  "keywords": [
+    "mowers",
+    "technical-challenge",
+    "node"
+  ],
+  "author": "dtodo1paco (Paco Alías)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtodo1paco/mowers-challenge/issues"
+  },
+  "homepage": "https://github.com/dtodo1paco/mowers-challenge#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.3.1",
+    "faker": "^5.5.3",
+    "fs-extra": "^10.0.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3",
+    "tslint": "^6.1.3",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {}
+}
